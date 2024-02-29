@@ -1,0 +1,21 @@
+.folder {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.folder-link {
+  margin-bottom: 10px;
+}
+
+.folder-icon {
+  font-size: 24px;
+  color: #007bff;
+}
+
+.folder-icon:hover {
+  color: #0056b3;
+}

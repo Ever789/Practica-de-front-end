@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './componentes/Navbar';
+import Footer from './componentes/Footer';
+import Folder from './componentes/Folder';
+import SearchBar from './componentes/SearchBar';
+import Card from './componentes/Card';
 
 function App() {
+  const handleSearch = (query) => {
+    console.log('Buscar:', query);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <main className="main-content">
+        <SearchBar onSearch={handleSearch} />
+        <Folder />
+        <div className="card-container">
+          <Card 
+            title="El Padrino" 
+            imageUrl="el_padrino.jpg" />
+          <Card 
+            title="Forrest Gump"
+            imageUrl="forrest_gump.jpg" />
+          <Card
+            title="Titanic"
+            imageUrl="titanic.jpg" />
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
