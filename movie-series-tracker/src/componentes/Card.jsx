@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 import '../estilos/Card.css';
 
-function Card(props) {
+const Card = ({movie}) => {
   return (
-    <div className="card">
-      <img 
-        className='imagen-portada'
-        src={require(`../imagenes/portada-${props.imageUrl}`)}
-        alt='Portada' />
-      <h3>{props.title}</h3>
+    <div>
+      <div className="card">
+        <img src={movie.Poster} alt={movie.Title} className="card img"/>
+        <div className="card-body">
+          <h4>{movie.Title} {movie.Year}</h4>
+          <p>{movie.Type}</p>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default Card;
+export default Card
