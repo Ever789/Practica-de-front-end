@@ -1,0 +1,27 @@
+.table-container {
+  background-color: #ffffff;
+  width: 30%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  float: right;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #cacaca;
+  border: 1px solid #808080;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #808080;
+  padding: 8px;
+}
